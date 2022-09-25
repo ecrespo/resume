@@ -1,0 +1,37 @@
+log:
+  level: INFO
+
+entryPoints:
+  web:
+    # http
+    address: ":80"
+
+http:
+  routers:
+    web-router:
+      rule: "Host(`seraph.local.ve`)"
+      entryPoints:
+        - web
+      middlewares:
+        - csrf
+      service: streamlit_app
+
+
+  middlewares:
+    csrf:
+      # https://docs.traefik.io/master/middlewares/headers/#hostsproxyheaders
+      # https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
+      headers:
+        hostsProxyHeaders: ["X-CSRFToken"]
+
+  services:
+    streamlit_app:
+      loadBalancer:
+        servers:
+          - url: http://streamlit_app:8501
+
+providers:
+  # https://docs.traefik.io/master/providers/file/
+  file:
+    filename: /etc/traefik/traefik.yml
+    watch: true

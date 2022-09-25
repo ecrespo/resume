@@ -3,13 +3,16 @@ import streamlit as st
 from PIL import Image
 import streamlit.components.v1 as components
 from streamlit_timeline import timeline
+import plotly.express as px
+import plotly.graph_objects as go
+import pandas as pd
 
-from constants import embed_component
-from textformat import txt,txt2,txt3,txt4
+from commons.constants import embed_component
+from commons.textformat import txt,txt2,txt3
 
 st.set_page_config(page_title='Ernesto Crespo\'s resume' ,layout="wide",page_icon='👨‍🔬')
 
-with open("style.css") as f:
+with open("/app/commons/style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
     
@@ -20,7 +23,7 @@ st.sidebar.write('''
 ##### *Resume* 
 ''')
 
-image = Image.open('ec.jpg')
+image = Image.open('/app/commons/ec.jpg')
 st.sidebar.image(image, width=130)
 
 st.sidebar.markdown('## Summary', unsafe_allow_html=True)
@@ -33,7 +36,7 @@ with st.sidebar:
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: ecrespo@gmail.com')
-pdfFileObj = open('pdfs/ErnestoCrespo.pdf', 'rb')
+pdfFileObj = open('/app/pdfs/ErnestoCrespo.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='ErnestoCrespo.pdf',mime='pdf')
 #####################
 # Navigation
@@ -41,7 +44,7 @@ st.sidebar.download_button('download resume',pdfFileObj,file_name='ErnestoCrespo
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 
-with open("nav.md") as f:
+with open("/app/commons/nav.md") as f:
     st.markdown('{}'.format(f.read()), unsafe_allow_html=True)
 
 
@@ -267,16 +270,68 @@ st.markdown('''
 st.markdown('''
 ## Skills
 ''')
-txt3('Programming', '`Python`, `R`, `Linux`')
+txt3('Programming', '`Python`, `R`, `Javascript`')
 txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
 txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `altair`, `ggplot2`')
 txt3('Machine Learning', '`scikit-learn`')
-txt3('Deep Learning', '`TensorFlow`')
-txt3('Web development', '`Flask`, `HTML`, `CSS`')
-txt3('Model deployment', '`streamlit`, `gradio`, `R Shiny`, `Heroku`, `AWS`, `Digital Ocean`')
+txt3('Deep Learning', '`TensorFlow`,`Keras`')
+txt3('Web development', '`Django`, `FastAPI`, `HTML`, `CSS`')
+txt3('Model deployment', '`streamlit`, `Heroku`, `AWS`, `Digital Ocean`')
+txt3('Operating System', '`Linux`, `Window`')
 
 
+skills = {
+    'Programming': {'Python':5, 'R':2, 'Javascript':1},
+    'Data processing/wrangling':{ 'SQL':3, 'pandas':5, 'numpy':5},
+    'Data visualization':{ 'matplotlib':5, 'seaborn':4, 'plotly':3},
+    'Machine Learning/Deep Learning': {'scikit-learn':3,'TensorFlow':2,'Keras':1},
+    'Web development': {'Django':4, 'FastAPI':3, 'Flask':2,'HTML':2, 'CSS':2},
+    'Operating System':  {'Linux':5, 'Window':3,'MacOs':2}
+}
 
+list_skills = list(skills.keys())
+
+select_skills = st.selectbox(
+        "Skills", list_skills
+    )
+
+#st.text(f"{select_skills}")
+
+
+df = pd.DataFrame(dict(
+    r=list(skills[select_skills].values()),
+    theta=list(skills[select_skills].keys())))
+
+#st.write(df)
+
+
+fig = px.line_polar(df, r='r', theta='theta', line_close=True,markers=True,title=select_skills)
+fig.update_traces(fill='toself')
+# fig.show()
+st.plotly_chart(fig, use_container_width=True)
+
+st.text("Comparative")
+fig2 = go.Figure()
+
+for key,value in skills.items():
+    
+    fig2.add_trace(go.Scatterpolar(
+        r=list(value.values()),
+        theta=list(value.keys()),
+        fill='toself',
+        name=key
+    ))
+
+fig2.update_layout(
+  polar=dict(
+    radialaxis=dict(
+      visible=True,
+      range=[0, 5]
+    )),
+  showlegend=True
+)
+
+st.plotly_chart(fig2, use_container_width=True)
 #####################
 st.markdown('''
 ## Social Media
@@ -286,7 +341,7 @@ txt2('LinkedIn', 'https://www.linkedin.com/in/ernestocrespo/?locale=en_US')
 txt2('Twitter', 'https://twitter.com/_seraph1')
 txt2('GitHub', 'https://github.com/ecrespo')
 txt2('Gitlab', 'https://gitlab.com/ecrespo')
-txt2('Blog', 'https://www.seraph.to')
+txt2('Blog', 'https://blog.seraph.to')
 
 
 #####################
@@ -295,7 +350,7 @@ st.markdown('''
 ''')
 
 with st.spinner(text="Building line"):
-    with open('timeline.json', "r") as f:
+    with open('/app/commons/timeline.json', "r") as f:
         data = f.read()
         timeline(data, height=500)
         

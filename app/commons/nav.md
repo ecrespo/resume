@@ -22,7 +22,7 @@
         <a class="nav-link" href="#timeline">Timeline</a>
       </li>
       <li class="nav-home">
-        <a class="nav-link" href="https://www.seraph.to">Blog</a>
+        <a class="nav-link" href="https://blog.seraph.to">Blog</a>
       </li>
     </ul>
   </div>
