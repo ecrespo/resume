@@ -277,7 +277,7 @@ txt3('Dashboard', '`Streamlit`, `Tableu`')
 txt3('Machine Learning', '`scikit-learn`')
 txt3('Deep Learning', '`TensorFlow`,`Keras`')
 txt3('Web development', '`Django`, `FastAPI`, `HTML`, `CSS`')
-txt3('Model deployment', '`streamlit`, `Heroku`, `AWS`, `Digital Ocean`')
+txt3('Model deployment', '`Heroku`, `AWS`, `Digital Ocean`')
 txt3('Operating System', '`Linux`, `Window`')
 
 
