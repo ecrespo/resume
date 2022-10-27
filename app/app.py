@@ -273,7 +273,7 @@ st.markdown('''
 txt3('Programming', '`Python`, `R`, `Javascript`')
 txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
 txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `altair`, `ggplot2`')
-txt3('Dashboard', '`Streamlit`, `Tableu`')
+txt3('Dashboard', '`Streamlit`, `Tableu`,`Power BI`')
 txt3('Machine Learning', '`scikit-learn`')
 txt3('Deep Learning', '`TensorFlow`,`Keras`')
 txt3('Web development', '`Django`, `FastAPI`, `HTML`, `CSS`')
@@ -285,7 +285,7 @@ skills = {
     'Programming': {'Python':5, 'R':2, 'Javascript':1},
     'Data processing/wrangling':{ 'SQL':3, 'pandas':5, 'numpy':5},
     'Data visualization':{ 'matplotlib':5, 'seaborn':4, 'plotly':3},
-    'Dashboard': {'Streamlit': 4,'Tableu':2},
+    'Dashboard': {'Streamlit': 4,'Tableu':2,'Power BI': 1},
     'Machine Learning/Deep Learning': {'scikit-learn':3,'TensorFlow':2,'Keras':1},
     'Web development': {'Django':4, 'FastAPI':3, 'Flask':2,'HTML':2, 'CSS':2},
     'Operating System':  {'Linux':5, 'Window':3,'MacOs':2}
