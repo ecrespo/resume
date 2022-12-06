@@ -264,7 +264,24 @@ st.markdown('''
 #####################
 st.markdown('''
 ## Portfolio
-[Github](https://github.com/ecrespo/data_science_portfoliio/blob/main/README.md)
+
+#### Notebooks
+
+##### EDAs
+
+* [Climate Change Temperature by Country, Global Temperature and CO2 ppm](https://github.com/ecrespo/data_science_portfoliio/blob/main/notebooks/Climate_change.ipynb)
+
+* [Exploring Covid19 data with pandas](https://github.com/ecrespo/data_science_portfoliio/blob/main/notebooks/covid19-6.ipynb)
+
+* [Analysis of the 25 largest retailers in the United States](https://github.com/ecrespo/data_science_portfoliio/blob/main/notebooks/Retailers_US.ipynb)
+
+* [Analysis Stanford Open Policy Project Dataset](https://github.com/ecrespo/data_science_portfoliio/blob/main/notebooks/police_traffic.ipynb)
+
+* [Investigating Netflix Movies and Guest Stars in The Office](https://github.com/ecrespo/data_science_portfoliio/blob/main/notebooks/Netflix.ipynb)
+
+##### Graphs
+
+* [Matplotlib](https://github.com/ecrespo/data_science_portfoliio/blob/main/notebooks/Matplotlib.ipynb)
 ''')
 
 #####################
