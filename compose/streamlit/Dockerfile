@@ -1,5 +1,5 @@
 # base image
-FROM python:3.9
+FROM python:3.11.1-slim-bullseye
 
 # streamlit-specific commands
 RUN mkdir -p /root/.streamlit
