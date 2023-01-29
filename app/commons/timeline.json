@@ -2,6 +2,216 @@
     "events": [
         {
             "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "28"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1EdqAuMZo2TjxlFfn1D6hdmuqv0VrqDxA/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Joining Data in SQL",
+                "text": "Joining Data in SQL"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "26"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1aMmnJKeZwPN10f17sS_eBb_2AO_bzl85/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Intermediate SQL",
+                "text": "Intermediate SQL"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "22"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/15G1WKK6EdFcnJw9uftmKXiRWX1mPFxsO/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Introduction to SQL",
+                "text": "Introduction to SQL"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "22"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1t59CmllgMn7lJIpQncyS4EbNIVopIRtA/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Introduction to Statistics",
+                "text": "Introduction to Statistics"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "15"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/15_efJHNsQ-ue8tX8BpVt_U0JIIohquek/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Understanding Data Visualization",
+                "text": "Understanding Data Visualization"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "10"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1frpYy5OEmOM8UOk952AlYPfMegbYuMix/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Path Data Analyst with Python",
+                "text": "Data Analyst with Python"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "10"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1c2IyyFobJ1A9jU6llzw29u9oPBqW5mHo/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Hypothesis Testing in Python",
+                "text": "Hypothesis Testing in Python"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2023",
+                "month": "01",
+                "day": "05"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1fI0TPDq_uJ1sXVlFTXG-e2oBE1bVuXQ_/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Sampling in Python",
+                "text": "Sampling in Python"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2022",
+                "month": "12",
+                "day": "31"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/11D3kfcW2sWx7SopWn1FBF-52ognRpmqX/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Exploratory Data Analysis in Python",
+                "text": "Exploratory Data Analysis in Python"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2022",
+                "month": "12",
+                "day": "25"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1dI75JlHxpHgexZuDQNGeYH9Rw2KExz-9/view?usp=share_link",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Introduction to Data Visualization with Seaborn",
+                "text": "Introduction to Data Visualization with Seaborn"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2022",
+                "month": "12",
+                "day": "23"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1XsPFAUf8FLxc_rNr1T-LGb0RetW95nIA/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Introduction to Data Visualization with Matplotlib",
+                "text": "Introduction to Data Visualization with Matplotlib"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2022",
+                "month": "12",
+                "day": "20"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1j3op5SizCkqWxvH7XvX2rL2hVCCwxLHk/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Introduction to Data Science in Python",
+                "text": "Introduction to Data Science in Python"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2022",
+                "month": "12",
+                "day": "16"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/1aculfXYMKAotvJtMEZfhLMqQDT8_yftT/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Introduction to Statistics in Python",
+                "text": "Introduction to Statistics in Python"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2022",
+                "month": "12",
+                "day": "10"
+            },
+            "media": {
+                "url": "https://drive.google.com/file/d/11ejPhA2uRcb43H6H5_XM7qA44VNrlo6a/view?usp=sharing",
+                "credit": "Datacamp"
+            },
+            "text": {
+                "headline": "Joining Data with pandas",
+                "text": "Joining Data with pandas"
+            }
+        },
+        {
+            "start_date": {
                 "year": "2022",
                 "month": "11",
                 "day": "23"
