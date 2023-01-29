@@ -30,6 +30,10 @@ st.sidebar.markdown('## Summary', unsafe_allow_html=True)
 st.sidebar.info('''
 - Electrical Engineer.
 - Python Developer.
+- Data analyst.
+- Data Engineer.
+- AWS Cloud Engineer.
+- Data Scientist.
 ''')
 with st.sidebar:
         components.html(embed_component['linkedin'],height=270)
@@ -66,7 +70,7 @@ st.markdown('''
 - Improved 50% (backend only for now) of the engineering software process in EMS emergency management systems by developing Python Clean code validation.
 - Reduce response times through bug fixes and support services for the medical emergency management tool.
 
-Tech Stack: Django, Django-rest framework, postgreSQL, Docker, AWS Lambda, Python, pandas, numpy, FastAPI.
+Tech Stack: Django, Django-rest framework, postgreSQL, SQL, streamlit,Docker, AWS Lambda, Python, pandas, numpy, FastAPI, NestJS.
 
 ''')
 
@@ -288,7 +292,7 @@ st.markdown('''
 st.markdown('''
 ## Skills
 ''')
-txt3('Programming', '`Python`, `R`, `Javascript`, `Julia`')
+txt3('Programming', '`Python`, `R`, `Javascript`, `Julia`, `Nestjs`')
 txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
 txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`')
 txt3('Dashboard', '`Streamlit`, `Tableu`,`Power BI`')
@@ -300,12 +304,12 @@ txt3('Operating System', '`Linux`, `Window`')
 
 
 skills = {
-    'Programming': {'Python':5, 'R':2, 'Javascript':2,'Julia':1},
-    'Data processing/wrangling':{ 'SQL':3, 'pandas':5, 'numpy':5},
-    'Data visualization':{ 'matplotlib':5, 'seaborn':4, 'plotly':3},
+    'Programming': {'Python':5, 'R':2, 'Javascript':2,'Julia':1,"Nestjs":2},
+    'Data processing/wrangling':{ 'SQL':4, 'pandas':5, 'numpy':5},
+    'Data visualization':{ 'matplotlib':5, 'seaborn':5, 'plotly':3},
     'Dashboard': {'Streamlit': 4,'Tableu':2,'Power BI': 1},
     'Machine Learning/Deep Learning': {'scikit-learn':3,'TensorFlow':2,'Keras':1},
-    'Web development': {'Django':4, 'FastAPI':3, 'Flask':2,'HTML':2, 'CSS':2},
+    'Web development': {'Django':5, 'FastAPI':3, 'Flask':2,'HTML':3, 'CSS':3},
     'Operating System':  {'Linux':5, 'Window':3,'MacOs':2}
 }
 
