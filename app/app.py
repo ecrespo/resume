@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 from commons.constants import embed_component
-from commons.textformat import txt,txt2,txt3
+from commons.textformat import txt, txt2, txt3
 
 st.set_page_config(page_title='Ernesto Crespo\'s resume' ,layout="wide",page_icon='👨‍🔬')
 
@@ -40,7 +40,7 @@ with st.sidebar:
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: ecrespo@gmail.com')
-pdfFileObj = open('/app/pdfs/ErnestoCrespo.pdf', 'rb')
+pdfFileObj = open('/app/pdfs/Resume_Ernesto_Crespo_software.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='ErnestoCrespo.pdf',mime='pdf')
 #####################
 # Navigation
@@ -70,7 +70,7 @@ st.markdown('''
 - Improved 50% (backend only for now) of the engineering software process in EMS emergency management systems by developing Python Clean code validation.
 - Reduce response times through bug fixes and support services for the medical emergency management tool.
 
-Tech Stack: Django, Django-rest framework, postgreSQL, SQL, streamlit,Docker, AWS Lambda, Python, pandas, numpy, FastAPI, NestJS.
+Tech Stack: Django, Django-rest framework, PostgreSQL,MongoDB, SQL, Streamlit,Docker, AWS Lambda, Python, Pandas, Numpy, FastAPI, NestJS, Knime, Serverless framework.
 
 ''')
 
@@ -81,6 +81,13 @@ st.markdown('''
 - Improve the medical prescription service for Asistensi clients in Mexico by 60% through the design and development of the Medikit API integration with EMS.
 
 Tech Stack: Django, Django-rest framework, postgreSQL, Docker, AWS S3, AWS Lambda, Python, pandas, numpy.
+''')
+
+txt('**Tech Coach**, *Talently, Inc.* ',
+'Mar2023-Sept2023')
+st.markdown('''
+- As a Tech Coach, I helped several people improve their skills in Data Science, Data Engineering, and Big Data..
+Tech Stack: AWS Athena, AWS RedShift, PostgreSQL, Python, Pandas, NumPy, Scikit-learn, Big Data Analysis with PySpark.
 ''')
 
 txt('**AWS Cloud Engineer**, *Escala24x7*',
@@ -292,25 +299,31 @@ st.markdown('''
 st.markdown('''
 ## Skills
 ''')
-txt3('Programming', '`Python`, `R`, `Javascript`, `Julia`, `Nestjs`')
-txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
-txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`')
-txt3('Dashboard', '`Streamlit`, `Tableu`,`Power BI`')
+txt3('Programming', '`Python`, `R`, `Golang`, `Javascript`, `Julia`, `Nestjs`')
+txt3('Data processing/wrangling', '`SQL`, `Pandas`, `Numpy`')
+txt3('Data visualization', '`Matplotlib`, `Seaborn`, `Plotly`,`Bokeh`')
+txt3('Dashboard', '`Streamlit`, `Taipy`,`Dash`,`Reflex`')
 txt3('Machine Learning', '`scikit-learn`')
 txt3('Deep Learning', '`TensorFlow`,`Keras`')
 txt3('Web development', '`Django`, `FastAPI`, `HTML`, `CSS`')
 txt3('Model deployment', '`Heroku`, `AWS`, `Digital Ocean`')
-txt3('Operating System', '`Linux`, `Window`')
-
-
+txt3('Operating System', '`Linux`, `Window`, `MacOs`')
+txt3('Low code tools', '`Knime`, `Tableu`,`Power BI`')
+txt3('Containers', '`Docker`, `Docker-compose`,`Kubernetes`')
+txt3('Serverless Development', '`AWS Cloudformation`, `AWS SAM`,`Serverless`')
+txt3('Database Engine', '`PostgreSQL`, `MySQLdb`,`MongoDB`')
 skills = {
-    'Programming': {'Python':5, 'R':2, 'Javascript':2,'Julia':1,"Nestjs":2},
-    'Data processing/wrangling':{ 'SQL':4, 'pandas':5, 'numpy':5},
-    'Data visualization':{ 'matplotlib':5, 'seaborn':5, 'plotly':3},
-    'Dashboard': {'Streamlit': 4,'Tableu':2,'Power BI': 1},
-    'Machine Learning/Deep Learning': {'scikit-learn':3,'TensorFlow':2,'Keras':1},
-    'Web development': {'Django':5, 'FastAPI':3, 'Flask':2,'HTML':3, 'CSS':3},
-    'Operating System':  {'Linux':5, 'Window':3,'MacOs':2}
+    'Programming': {'Python': 5, 'R': 3, 'Golang': 3, 'Javascript': 2, 'Julia': 2, "Nestjs": 2},
+    'Data processing/wrangling': { 'SQL': 5, 'Pandas': 5, 'Numpy': 5},
+    'Data visualization': { 'Matplotlib': 5, 'Seaborn': 5, 'Plotly': 3,'Bokeh': 2},
+    'Dashboard': {'Streamlit': 5, 'Dash': 2, 'Taipy': 1, 'Reflex': 1},
+    'Machine Learning/Deep Learning': {'scikit-learn': 5, 'TensorFlow': 2, 'Keras': 1},
+    'Web development': {'Django': 5, 'FastAPI': 4, 'Flask': 2,'HTML': 3, 'CSS': 3},
+    'Operating System':  {'Linux': 5, 'Window': 3, 'MacOs': 2},
+    "Low code tools": {'Knime': 3, 'Tableu': 2, 'Power BI': 1},
+    'Containers': {'Docker': 5, 'Docker-compose': 4, 'Kubernetes': 2},
+    'Serverless Development': {'AWS Cloudformation': 4, 'AWS SAM': 4, 'Serverless': 3},
+    'Database Engine': {'PostgreSQL': 5, 'MySQLdb': 3, 'MongoDB': 3},
 }
 
 list_skills = list(skills.keys())
@@ -332,7 +345,7 @@ df = pd.DataFrame(dict(
 fig = px.line_polar(df, r='r', theta='theta', line_close=True,markers=True,title=select_skills)
 fig.update_traces(fill='toself')
 # fig.show()
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True,use_container_height=True)
 
 st.text("Comparative")
 fig2 = go.Figure()
@@ -355,7 +368,7 @@ fig2.update_layout(
   showlegend=True
 )
 
-st.plotly_chart(fig2, use_container_width=True)
+st.plotly_chart(fig2, use_container_width=True,use_container_height=True)
 #####################
 st.markdown('''
 ## Social Media
